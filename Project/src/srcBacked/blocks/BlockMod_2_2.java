@@ -1,0 +1,85 @@
+/**
+ * @author Tomas Kunickij
+ * @author Maros Orsak
+ *
+ * Project "Scheme calculator" for IJA at FIT VUT, 2018
+ * Description of a file: Subclass of a class Block, defines one kind of a block which can be used in calculations
+ */
+
+
+package srcBacked.blocks;
+
+import errorHandler.MyException;
+import srcBacked.Block;
+import srcBacked.Linker;
+import srcBacked.SchemeManager;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * BlockMod_2_2.java - Subclass of a class Block, defines one kind of a block which can be used in calculations
+ */
+public class BlockMod_2_2 extends Block {
+
+    static private final String[][] portsIn = new String[][]{{"T1"},{"T1"}};
+    static private final String[][] portsOut = new String[][]{{"T1"},{"T2"}};
+
+    /**
+     * Constructor for creating the class
+     * @param linker An instance of the linker, which manages and saves all the links
+     * @throws MyException When wrong number or ports
+     */
+    public BlockMod_2_2(Linker linker) throws MyException {
+
+        super(portsIn, portsOut , linker);
+
+        if (super.getNumberOfInputPorts() != 2 || super.getNumberOfOutputPorts() != 2) {
+            throw new MyException("Wrong number of ports was entered when constructing a BlockAdd_2_1");
+        }
+    }
+
+    /**
+     * Checks if the inputs of this block has values on ports or are connected
+     * @throws MyException When input values are not set
+     */
+    public void checkInputs() throws MyException {
+
+        if(!(getLinker().isThisInputPortConnected(getPortInByIndex(0))) && getPortInValue(0, "T1") == null){
+            throw new MyException("Set values in input ports first before calling calculate()");
+        }
+        if(!(getLinker().isThisInputPortConnected(getPortInByIndex(1))) && getPortInValue(1, "T1") == null){
+            throw new MyException("Set values in input ports first before calling calculate()");
+        }
+    }
+
+    /**
+     * Calculates this one concrete block and sets the results to int input port(s)
+     * @param sm An instance of SchemeManager which manages everything
+     * @throws MyException When input values are not set
+     * @throws InterruptedException When thread work went wrong
+     */
+    @Override
+    protected void calculateHelper(SchemeManager sm) throws MyException, InterruptedException {
+
+        checkInputs();
+
+        Double temp1 = getPortInValue(0, "T1");
+        Double temp2 = getPortInValue(1, "T1");
+
+        double modulo = temp1 % temp2;
+        double remainder = (int)(temp1 / temp2);
+        Map<String, Double> map = new HashMap<String, Double>();
+        Map<String, Double> map1 = new HashMap<String, Double>();
+        // FIXME: create two maps maybe...
+        map.put("T1", remainder);
+        map1.put("T2", modulo);
+
+        super.GUIHighlightBlock(sm);
+        super.setPortOutValues(map, 0);
+        super.setPortOutValues(map1, 1);
+        // DO NOT FORGET THIS
+        setCalculated(true);
+    }
+
+}

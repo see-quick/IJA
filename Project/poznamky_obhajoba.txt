@@ -1,0 +1,21 @@
+- levy panel vsechny bloky, uzivatel vidi typy
+- vrsek navigacni panel
+- plocha pro uzivatele
+
+- drag and drop
+- vytvori se blok s porty, po najeti na nej je mozne ukazat jeho stav
+- po kliknuti pravym tlacitkem mysi je mozno zadat vstupni hodnotu na port
+- nekolik typu hodnot v portech, vcetne podpory vice typu v jednom portu, T1, T2, T1.T2
+- ukazat zadani hodnot -> calculate, zvyrazneni, opravdu spocitano
+- clear values, GUI take ukaze ze je smazano
+- calculate bez zadanych hodnot
+
+- vice bloku, propoj kdyz klikneme na output port a pak na input port, zadame hodnoty a calculate
+- calculate step, spocita vzdy jen jeden nasledujici blok, dalsi stale cekaji
+- propojeni spatnych typu v portech
+- cykly ve schematu
+
+- clear scheme
+- save scheme, pojmenujeme, ulozime kam chceme
+- load scheme, nacte vybrane schema, je osetreno nacteni spatneho schematu
+- ukazka nactenych slozitych schemat, popsani jednotlivych bloku

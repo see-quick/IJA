@@ -1,0 +1,80 @@
+.dragicon {
+	-fx-background-radius: 10; 
+}
+
+.icon-BlockAdd_1_1 {
+	/*-fx-background-color: #001F3F;*/
+	/*-fx-background-image: url("../../../lib/pictures/BlockAdd_1_1(100x100).png");*/
+	-fx-background-image: url("pictures/BlockAdd_1_1(100x100).png");
+}
+
+
+.icon-BlockAdd_2_1 {
+	/*-fx-background-color: #0074D9;*/
+   /*-fx-background-image: url("../../../lib/pictures/BlockAdd_2_1(100x100).png");*/
+    -fx-background-image: url("pictures/BlockAdd_2_1(100x100).png");
+	/*-fx-shadow-highlight-color: #CCFF99*/
+}
+
+.icon-BlockSub_2_1 {
+	/*-fx-background-color: #7FDBFF;*/
+	 /*-fx-background-image: url("../../../lib/pictures/BlockSub_2_1(100x100).png");*/
+	 -fx-background-image: url("pictures/BlockSub_2_1(100x100).png");
+}
+
+.icon-BlockSub_1_1 {
+	/*-fx-background-color: #39CCCC;*/
+	 /*-fx-background-image: url("../../../lib/pictures/BlockSub_1_1(100x100).png");*/
+	 -fx-background-image: url("pictures/BlockSub_1_1(100x100).png");
+}
+
+.icon-BlockMod_2_2 {
+     /*-fx-background-image: url("../../../lib/pictures/BlockMod_2_2(100x100).png");*/
+     -fx-background-image: url("pictures/BlockMod_2_2(100x100).png");
+	/*-fx-background-color: #3D9970;*/
+}
+
+.icon-BlockMul_1_1 {
+	/*-fx-background-color: #2ECC40;*/
+	/*-fx-background-image: url("../../../lib/pictures/BlockMul_1_1(100x100).png");*/
+	-fx-background-image: url("pictures/BlockMul_1_1(100x100).png");
+}
+
+.icon-BlockDiv_2_1 {
+	/*-fx-background-color: #01FF70;*/
+	/*-fx-background-image: url("../../../lib/pictures/BlockDiv_2_1(100x100).png");*/
+	-fx-background-image: url("pictures/BlockDiv_2_1(100x100).png");
+}
+
+.icon-BlockConvertT1toT2 {
+    /*-fx-background-color: #FFDC00;*/
+    /*-fx-background-image: url("../../../lib/pictures/BlockConv_T1_T2(100x100).png");*/
+    -fx-background-image: url("pictures/BlockConv_T1_T2(100x100).png");
+}
+
+.icon-BlockConvertT2toT1 {
+   /* -fx-background-color: #FF851B;*/
+    /*-fx-background-image: url("../../../lib/pictures/BlockConv_T2_T1(100x100).png");*/
+    -fx-background-image: url("pictures/BlockConv_T2_T1(100x100).png");
+}
+
+.port-black {
+    -fx-background-radius: 5;
+    -fx-background-color: black;
+	/*-fx*/
+}
+
+.being-calculated {
+	-fx-background-color: black;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}

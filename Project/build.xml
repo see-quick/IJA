@@ -1,0 +1,54 @@
+<project basedir="." default="run" name="IJAProject">
+
+    <path id="classpath">
+        <fileset dir="lib" includes="*.jar" />
+    </path>
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dest-client"/>
+        <delete dir="doc"/>
+        <mkdir dir="build"/>
+        <mkdir dir="dest-client"/>
+        <mkdir dir="doc"/>
+    </target>
+
+    <target name="run" depends="build, jar">
+        <java classname="main" failonerror="true" fork="yes">
+            <!--<arg value="-J-Xmx1024M"/>-->
+            <classpath>
+                <path refid="classpath" />
+                <path location="dest-client/ija-client.jar" />
+            </classpath>
+        </java>
+    </target>
+
+    <target name="compile" depends="build, jar, doc"></target>
+
+    <target name="build">
+        <mkdir dir="build"/>
+        <javac srcdir="src" destdir="build" includeantruntime="false">
+            <classpath>
+                <path refid="classpath" />
+            </classpath>
+        </javac>
+        <copy todir="build/srcGUI/resources" >
+            <fileset dir="src/srcGUI/resources">
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="dest-client"/>
+        <jar jarfile="dest-client/ija-client.jar" basedir="build" compress="true">
+            <manifest>
+                <attribute name="Main-Class" value="main"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="doc">
+        <javadoc sourcepath="src" destdir="doc"/>
+    </target>
+
+</project>

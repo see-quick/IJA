@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root fx:id="root_pane" minHeight="682.0" minWidth="1024.0" prefHeight="716.0" prefWidth="1024.0" stylesheets="@application.css" type="javafx.scene.layout.AnchorPane" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <SplitPane fx:id="base_pane" dividerPositions="0.10567514677103718" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0" minWidth="0" prefHeight="660.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="56.0">
+            <items>
+                <ScrollPane fitToHeight="true" hbarPolicy="NEVER" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="139.0">
+                    <padding>
+                        <Insets left="8.0" top="6.0" />
+                    </padding>
+                    <content>
+                        <VBox fx:id="left_pane" prefHeight="652.0" prefWidth="119.0" spacing="15.0" />
+                    </content>
+                </ScrollPane>
+                <AnchorPane fx:id="right_pane" prefHeight="658.0" prefWidth="894.0" />
+            </items>
+        </SplitPane>
+    </children>
+</fx:root>

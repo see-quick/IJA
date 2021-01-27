@@ -1,0 +1,38 @@
+TODO
+
+-----
+20.4.
+
+input values DONE
+calculate, err kdyz nevyplneno DONE
+propoje NAPUL(out do in), vykreslovani propoju NAPUL, DONE
+ulozeni schematu/nacteni - tlacitka, when loading the scheme, the GUI must also draw it
+prejmenovat red, blue na realne typy DONE
+exception kdyz spojime nekompatibilni typy, mnohonasobny input DONE
+konvertovanie typov t1 -> t2 , t2 -> t1 DONE
+
+File
+  load scheme
+  save scheme
+Clear Values
+Delete scheme
+Calculate
+About
+
+Ostatni druhy blocku DONE
+Popis bloku v levem panelu
+Pridani vsech blocku do leveho panelu
+Zobrazeni stavu blocku po najeti mysi - such a nice hover texts DONE
+
+-----
+20.4.
+
+procist zadani
+
+krokovani vypoctu
+mazani bloku - remove stuff from linkedFxBackend when deleting blocks
+presouvani blocku
+pohrat si s vzhledem
+
+
+https://github.com/google/guava/releases/download/v21.0/guava-21.0.jar
